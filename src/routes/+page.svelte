@@ -1,15 +1,15 @@
 <script lang="ts">
-    import Navbar from "$lib/widgets/navbar.svelte";
+	import Navbar from '$lib/widgets/navbar.svelte';
 </script>
 
-<div class="bg-[url($lib/assets/bg.png)] sepia bg-cover backdrop-blur-lg min-h-screen">
-    <div class="w-full h-full min-h-screen">
-       <Navbar />
+<div class="min-h-screen bg-[url($lib/assets/bg.png)] bg-cover sepia backdrop-blur-lg">
+	<div class="h-full min-h-screen w-full">
+		<Navbar />
 
-        <div class="container mx-auto w-full max-w-6xl rounded-xl overflow-hidden">
-            <div class="bg-base-100 p-4">
-                <h1 class="text-center text-6xl font-black py-5"> Hi I am CodingKitten </h1>
-            </div>
-        </div>     
-    </div>
+		<div class="container mx-auto w-full max-w-6xl overflow-hidden rounded-xl">
+			<div class="bg-base-100 p-4">
+				<h1 class="py-5 text-center text-6xl font-black">Hi I am CodingKitten</h1>
+			</div>
+		</div>
+	</div>
 </div>
