@@ -1,10 +1,26 @@
-const darkTheme: string = "forest"
-const lightTheme: string = "forest"
+import { browser } from '$app/environment';
 
-export function setDark() {
-    document.documentElement.setAttribute("data-theme", darkTheme);
+const DARK_THEME = 'synthwave';
+const LIGHT_THEME = 'synthwave-light';
+
+const STORAGE_KEY = 'theme';
+
+export function applyTheme(isDark: boolean) {
+	if (!browser) return;
+
+	const theme = isDark ? DARK_THEME : LIGHT_THEME;
+
+	document.documentElement.setAttribute('data-theme', theme);
+	localStorage.setItem(STORAGE_KEY, theme);
 }
 
-export function setLight() {
-    document.documentElement.setAttribute("data-theme", darkTheme);
+export function getTheme(): boolean {
+	if (!browser) return true;
+
+	const saved = localStorage.getItem(STORAGE_KEY);
+
+	if (saved === DARK_THEME) return true;
+	if (saved === LIGHT_THEME) return false;
+
+	return true;
 }

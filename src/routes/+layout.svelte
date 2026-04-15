@@ -2,7 +2,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import '@fontsource-variable/space-grotesk/wght.css';
-	
+
 	let { children } = $props();
 </script>
 

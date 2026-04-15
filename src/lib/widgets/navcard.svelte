@@ -1,7 +1,11 @@
 <script lang="ts">
-    let { title, cols } = $props();
+	let { title, cols } = $props();
 </script>
 
-<div class="{cols} bg-base-200 px-8 py-32 rounded-2xl">
-    <h1 class="text-base-content text-4xl font-bold text-center font-[Space_Grotesk_Variable]">{title}</h1>
+<div class="{cols} row-span-1 h-full w-full rounded-2xl bg-base-200">
+	<div class="flex h-full flex-row items-center justify-center">
+		<h1 class="text-center font-[Space_Grotesk_Variable] text-4xl font-bold text-base-content">
+			{title}
+		</h1>
+	</div>
 </div>
